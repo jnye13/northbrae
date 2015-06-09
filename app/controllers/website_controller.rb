@@ -7,6 +7,9 @@ class WebsiteController < ApplicationController
 		@page_body_cls = "features-page"
 	end
 
+	def pricing
+	end
+
 	def signup
 		@page_body_cls = "signup-page access-page has-full-screen-bg"
 	end
