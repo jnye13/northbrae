@@ -60,11 +60,70 @@
 	                        </ul>                            
 	                    </li>
 	                                        
-	                    <li class="nav-item nav-item-cta last"><a class="btn btn-cta btn-cta-secondary" href="/signup">Sign up</a></li>
+	                    <li id="btn-request-demo" class="nav-item nav-item-cta last"><a class="btn btn-cta btn-cta-secondary" href="#">Request Demo</a></li>
 	                </ul><!--//nav-->
 	            </div><!--//navabr-collapse-->
 	        </nav><!--//main-nav-->                     
 	    </div><!--//container-->
+
+
+
+        <div id="requestDemo">
+        <div style="padding: 20px; width:210px; height:390px;overflow:hidden;">
+          <div style="width:1000px;">
+            <div class="requestDemoFormTab" style="width:330px;float:left;">
+              <%= form_tag "/request_demo", :method => "POST", :class =>"form-horizontal", :id => "requestDemoForm" do %>
+              <legend>Request a demo</legend>
+              <div class="control-group">
+                <label class="control-label" for="inputName">Name</label>
+                <div class="controls">
+                  <%= text_field(:request_demo, :name, :placeholder=>"Name", :required => true) %>
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="inputCompany">Company</label>
+                <div class="controls">
+                  <%= text_field(:request_demo, :company, :placeholder=>"Company", :required => true) %>
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="inputEmail">Email</label>
+                <div class="controls">
+                  <%= email_field(:request_demo, :email, :placeholder=>"Email", :required => true) %>
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="inputPhone">Phone</label>
+                <div class="controls">
+                  <%= phone_field(:request_demo, :phone, :placeholder=>"Phone", :required => true) %>
+                </div>
+              </div>
+              <div class="control-group">
+                <div class="controls" style="padding-top: 30px;">
+                  <button type="submit" class="btn btn-cta btn-cta-primary">Give me a demo!</button>
+                </div>
+              </div>
+              <% end %>
+              <div class="progress progress-striped active" style="visibility:hidden;">
+                <div class="bar" style="width: 100%;"></div>
+              </div>
+            </div>
+
+            <div class="requestDemoThanks" style="margin-left:20px; float:left; width:210px;">
+              <legend>Thank you</legend>
+              <p>We will contact you soon with more information.</p>
+              
+              <div id="btn-signup-done" style="float:right;" class="btn">Close</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+
+
+
 	</header><!--//header-->
 
 	<%= yield %>

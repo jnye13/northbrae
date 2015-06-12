@@ -2,13 +2,15 @@ Rails.application.routes.draw do
 
   root 'website#index'
 
+  resources :request_demo
+
   get '/features' => 'website#features'
   get '/pricing' => 'website#pricing'
 
   get '/about-us' => 'website#about'
   get '/contact' => 'website#contact'
 
-  get '/signup' => 'website#signup'
+  get '/request_demo' => 'website#request_demo'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

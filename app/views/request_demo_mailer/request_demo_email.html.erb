@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h3><%= @request_demo[:name] %> just requested a demo on smrtsystems.com</h3>
+    <table>
+    <% @request_demo.each  do |key,value| %>
+      <%
+        if key =="_id"
+          key = "id"
+        end
+        if key == "_rev"
+          next
+        end
+      %>
+      <tr><td><%= key.humanize %>:</td><td><%= value %></td></tr>
+    <% end %>
+    </table>
+  </body>
+</html>
