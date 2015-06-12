@@ -55,7 +55,6 @@ class RequestDemoMailer < ActionMailer::Base
   		:basic_auth => authMailChimp,
   		:headers => {
     	'Content-Type' => 'application/json'})
-  	)
 
   end
 end
