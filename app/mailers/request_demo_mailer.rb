@@ -13,16 +13,16 @@ class RequestDemoMailer < ActionMailer::Base
     end
     mail({
     	to: to, 
-    	subject: "#{@request_demo[:name]} just requested a demo."
+    	subject: "#{@request_demo[:firstName]} #{@request_demo[:lastName]} just requested a demo."
     })
 
     custom = {}
     custom["Source"] = "Website request demo form"
 	
-	query = {
+	queryCloseIO = {
 	    name: "#{@request_demo[:company]}",
 	    contacts: [{
-	      name: "#{@request_demo[:name]}",
+	      name: "#{@request_demo[:firstName]} #{@request_demo[:lastName]}",
 	      emails: [{type: "office", email: "#{@request_demo[:email]}"}],
 	      phones: [{type: "office", phone: "#{@request_demo[:phone]}"}]
 	    }],
@@ -31,13 +31,23 @@ class RequestDemoMailer < ActionMailer::Base
 
 	auth = {:username => "b4ce5c1ca62fbf4e68e9f504e29c072029f9a31f84cc35b1c4383f6c", :password => ""}
 
-	response = HTTParty.post("https://app.close.io/api/v1/lead/",
-    :body => query.to_json,
+	HTTParty.post("https://app.close.io/api/v1/lead/",
+    :body => queryCloseIO.to_json,
     :basic_auth => auth,
     :verify => false,
     :headers => {
     	'Content-Type' => 'application/json'})
 
-	print response
+
+	merge_fields = {}
+	merge_fields["FNAME"] = "#{@request_demo[:firstName]}"
+	merge_fields["LNAME"] = "#{@request_demo[:lastName]}"
+
+	queryMailChimp = {
+	    email_address: "#{@request_demo[:email]}",
+	    status: "subscribed",
+	    merge_fields: merge_fields
+  	}
+	
   end
 end

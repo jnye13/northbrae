@@ -69,15 +69,21 @@
 
 
         <div id="requestDemo">
-        <div style="padding: 20px; width:210px; height:390px;overflow:hidden;">
+        <div style="padding: 20px; width:210px; height:450px;overflow:hidden;">
           <div style="width:1000px;">
             <div class="requestDemoFormTab" style="width:330px;float:left;">
               <%= form_tag "/request_demo", :method => "POST", :class =>"form-horizontal", :id => "requestDemoForm" do %>
               <legend>Request a demo</legend>
               <div class="control-group">
-                <label class="control-label" for="inputName">Name</label>
+                <label class="control-label" for="inputName">First Name</label>
                 <div class="controls">
-                  <%= text_field(:request_demo, :name, :placeholder=>"Name", :required => true) %>
+                  <%= text_field(:request_demo, :firstName, :placeholder=>"First name", :required => true) %>
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="inputName">Last Name</label>
+                <div class="controls">
+                  <%= text_field(:request_demo, :lastName, :placeholder=>"Last name", :required => true) %>
                 </div>
               </div>
               <div class="control-group">
