@@ -68,10 +68,10 @@ $(document).on("page:change",function(){
     	var isToggled = email_validation_error.is( ":visible" );
     	if(data['is_valid'] == false && !isToggled){
     		email_validation_error.toggle('fast')//.css('visibility','visible')
-    		submit_button.toggle('fast')
+    		submit_button.addClass('disabled')
     	}else if(data['is_valid'] == true && isToggled){
     		email_validation_error.toggle('fast')
-    		submit_button.toggle('fast')
+    		submit_button.removeClass('disabled')
     	}
 	}
 	function validation_error() {
