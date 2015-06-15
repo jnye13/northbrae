@@ -45,6 +45,9 @@ $(document).on("page:change",function(){
       $.ajax({type: "POST", url: $this.attr('action'), data: $this.serialize(), success: function(){
         $('#requestDemoModal').modal('hide')
         $('#thankYouModal').modal('show');
+        if(analytics){
+          analytics.track('Demo Requested')
+        }
       }});
     });
 
