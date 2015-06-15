@@ -4,7 +4,7 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
   </head>
   <body>
-    <h3><%= @request_demo[:name] %> just requested a demo on smrtsystems.com</h3>
+    <h3><%= @request_demo[:firstName] %> <%= @request_demo[:lastName] %> just requested a demo on smrtsystems.com</h3>
     <table>
     <% @request_demo.each  do |key,value| %>
       <%
