@@ -1,4 +1,43 @@
-<div class="bg-slider-wrapper">
+
+
+ <section>  
+        <div class="sections-cover">
+           <h2 class="title text-center">What can SMRT do for you?</h2>
+            <p class="intro text-center">Never worry about what's going right.</p>  
+            <div class="row item">
+                <div class="content col-md-3 col-sm-12 col-xs-12 text-center">
+                
+                <a href="#pos">
+                        <%= responsive_image "features/POS_screen.png" %>
+                        <h3 class="title text-center">SMRT POS</h3>
+                </a>
+                </div>    
+               
+                    <div class="content col-md-3 col-sm-12 col-xs-12">
+                    <a href="#card">
+                        <%= responsive_image "features/smrt_pay.png" %>
+                         <h3 class="title text-center">SMRT Pay</h3>
+                </a>    
+                </div> 
+
+                <div class="content col-md-3 col-sm-12 col-xs-12">
+                    <a href="#delivery">
+                        <%= responsive_image "features/delivery.png" %>
+                        <h3 class="title text-center">SMRT Delivery</h3>
+                      </a>
+                </div>     
+
+                 <div class="content col-md-3 col-sm-12 col-xs-12">
+                    <a href="#stations">
+                        <%= responsive_image "features/item_location.png" %>
+                         <h3 class="title text-center">SMRT Stations</h3>
+                    </a>
+                </div> 
+        </div>        
+</section>
+
+
+<div class="wrapper">
     <div class="flexslider bg-slider">
         <ul class="slides">
             <li class="slide slide-1"></li>
@@ -11,94 +50,132 @@
 
 <section class="promo section section-on-bg">
     <div class="container text-center">                
-        <h2 class="title">Automate your assembly<br />streamline your business</h2>
-        <p class="intro">SMRT is designed to make it so you never have to worry about your company<br/>let us take care of it for you.</p>
+        <h2 class="title">Work Smarter</h2>
+       <!--  <p class="intro">SMRT is designed to make it so you never have to worry about your company<br/>let us take care of it for you.</p> -->
         <p><a class="btn btn-cta btn-cta-primary" href="/signup">Get SMRT</a></p>   
         <button type="button" class="play-trigger btn-link " data-toggle="modal" data-target="#modal-video" ><i class="fa fa-youtube-play"></i> Watch the video</button>
     </div><!--//container-->
 </section><!--//promo-->
 
-
-<div class="sections-wrapper">    
-    <!-- ******Why Section****** -->
-    <section id="why" class="section why">
-        <div class="container">
-            <h2 class="title text-center">What does SMRT do?</h2>
-            <p class="intro text-center">We take care of every aspect of running your operation.</p>
-            <div class="row item">
+            
+<div class="sections-wrapper">
+     <section id="why" class="section why">
+        <div class="container"> 
+               <!--  </div> --><!--//content-->
+                <!-- <figure class="figure col-md-7 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
+                	<%= responsive_image "figures/accounting.png" %>
+                    <figcaption class="figure-caption">(accounting, sceduling, customers &amp; progress) </figcaption>
+                </figure> -->
+            <!-- </div> --><!--//item-->
+            
+             <div class="row item">
                 <div class="content col-md-4 col-sm-12 col-xs-12">
-                    <h3 class="title">Don't worry about what's going right</h3>
+                <a name="pos"></a>  
+                    <h3 class="title">SMRT POS</h3>
                     <div class="desc">
-                        <p>We take care of the big things for you. Check in on your employees, stations, and laundry at the touch of a button.</p>
-                        <p>Our clothestracking software keeps tabs on every item from start to finish. Never lose a piece again.</p>
-                    </div>
-                    <div class="quote">
-                        <div class="quote-profile">
-                        	<%= responsive_image "people/profile-s-1.png", "img-circle" %>
-                        </div><!--//profile-->
-                        <div class="quote-content">
-                            <blockquote><p><a href="https://twitter.com/3rdwave_themes" target="_blank">@velocity</a>Hodor. Hodor hodor hodor hodor; hodor hodor? Hodor hodor, hodor. Hodor HODOR hodor, hodor hodor. Hodor!</p></blockquote>
-                            <p class="source">Hodor.</p>
-                        </div><!--//quote-content-->                                     
-                    </div><!--//quote-->                        
+                        <p>Find every customer instantly in our POS portal. Keep credit cards on file and set up automatic billing.</p>
+                        <p>Find customers instanly. Enable automatic invoices and billing to cut down mistakes made with cash.</p>
+                        <p>Fees from credit card companies can pile up. We'll help you save on processing fees as soon as you join and provide complete transparency to what fees are collected for each transaction.
+                    </div>                         
                 </div><!--//content-->
                 <figure class="figure col-md-7 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
-                	<%= responsive_image "figures/figure-1.png" %>
-                    <figcaption class="figure-caption">(Screenshot: Coral - App &amp; website startup kit) </figcaption>
+
+                    <%= responsive_image "features/pos_crm_inventory_small.png", 'img-circle' %>
+
+                    <figcaption class="figure-caption">(Screenshot: <a href="http://background/accounting_sheets.png" target="_blank">POS customer profile)</a> </figcaption>
+
                 </figure>
             </div><!--//item-->
-            
+
             <div class="row item">
                 <div class="content col-md-4 col-sm-12 col-xs-12 col-md-push-8 col-sm-push-0 col-xs-push-0">
-                    <h3 class="title">SMRT </h3>
+                    <h3 class="title">SMRT Automated Assembly</h3>
                     <div class="desc">
-                        <p>SMRT Software comes pre-loaded onto android slates. SMRT is so effiecient, you could run your whole store from just one slate (though unplugging it and carrying it around station to station doesn't sound practical). </p>
-                        <p>Our storage and delivery apps work on android phones for maximum portability. Track your inventory and map deliveries from the palm of your hand.</p>
-                        <p><i class="fa fa-download"></i> <a href="download.html">Download mobile versions</a></p>
+                        <p>For just $4,500 you can get a system that assembles for you. You get 2 free tablets loaded with SMRT technology and an assembly rack. Save time and money by investing in an assembly rack that does the work for you.</p>
+                        <p>Package inventory dynamically with less physical space using Auto-Assembly. Orders assemble and self-sort relative to your production capacity to prevent overflow. Our system is compatible with Assisted-Assembly or Metalprogetti Systems™.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fa fa-star"></i>Don't waste time manually sorting.</li>
+                                <li><i class="fa fa-star"></i>Be more accurate with cusomter-specific profiles.</l>
+                                <li><i class="fa fa-star"></i>Rotates to your location- all you have to do is stand there and hang clothes!</li>
+                                <li><i class="fa fa-star"></i>Prevent late orders.</li>
+                            </ul>
+                            
+                            <p>SMRT assembly will maximize your time and minimize your effort.  </p>
                     </div>
                     
                     <div class="quote">
                         <div class="quote-profile">
                         	<%= responsive_image "people/profile-s-2.png", "img-circle" %>
                         </div><!--//profile-->
-                        <div class="quote-content">
+                       
+                <div class="quote-content">
                             <blockquote><p>Simply awesome SMRT Assembly has instantly improved my business.</p></blockquote>
                             <p class="source">Kyle Riggle, Orth Cleaners</p>
                         </div><!--//quote-content-->         
                     </div><!--//quote-->                        
                 </div><!--//content-->
                 <figure class="figure col-md-7 col-sm-12 col-xs-12 col-md-pull-4 col-sm-pull-0 col-xs-pull-0">
-                	<%= responsive_image "figures/figure-2.png" %>
+                	<%= responsive_image "features/assemble.png" %>
                     <div class="control text-center">
                         <button type="button" class="play-trigger" data-toggle="modal" data-target="#modal-video"><i class="fa fa-play"></i></button>                    
                     </div><!--//control-->
                 </figure>
             </div><!--//item-->
-            
-            <div class="row item ">
-                <div class="content col-md-4 col-sm-12 col-xs-12">
-                    <h3 class="title">Conect your stores</h3>
-                    <div class="desc">
-                        <p>Do you have multiple storefronts? Multiple delivery vans? Never lose and order with Clothestracker.</p>
-                        <p>You can detail clothes at one location and send them to your plant for cleaning seamlessly. Save time and space in your strorefronts with by using automatic assembly at your plant. </p>
-                    </div>
-                    <div class="quote">
-                        <div class="quote-profile">
-                        	<%= responsive_image "people/profile-s-3.png", 'img-circle' %>
 
-                        </div><!--//profile-->
-                        <div class="quote-content">
-                            <blockquote><p>Hodor. Hodor hodor, hodor. Hodor hodor - hodor?! Hodor hodor - hodor hodor HODOR hodor, hodor hodor... Hodor hodor hodor?</p></blockquote>
-                            <p class="source"><a href="#">@hodor</a>, London</p>
-                        </div><!--//quote-content-->          
-                    </div><!--//quote-->                            
+             <div class="row item ">
+                <div class="content col-md-4 col-sm-12 col-xs-12">
+                 <a name="card"></a>
+                    <h3 class="title">SMRT Pay</h3>
+                    <div class="cc">
+                        <p>Fees from credit card companies can pile up. We'll help you save on processing fees as soon as you join and provide complete transparency to what fees are collected for each transaction.</p>
+                        <p>Hodor hodor HODOR! Hodor hodor, hodor. Hodor hodor - HODOR hodor, hodor hodor hodor! </p>
+                    </div>                           
                 </div><!--//content-->
                 <figure class="figure col-md-7 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
 
-                	<%= responsive_image "figures/connect_stores.png", 'img-circle' %>
+                    <%= responsive_image "features/credit_card.png", 'img-circle' %>
 
-                    <figcaption class="figure-caption">(Screenshot: <a href="http://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-for-startups-tempo/?ref=3wm" target="_blank">Tempo - Bootstrap template for startups)</a> </figcaption>
+                    <figcaption class="figure-caption">(<a href="http://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-for-startups-tempo/?ref=3wm" target="_blank">Credit card processing is built-in)</a> </figcaption>
+                </figure>
+            </div><!--//item-->
+            
+            <div class="row item ">
+              <figure class="figure col-md-7 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
 
+                    <%= responsive_image "background/accounting_sheets.png", 'img-circle' %>
+
+                    <figcaption class="figure-caption">(Screenshot: <a href="http://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-for-startups-tempo/?ref=3wm" target="_blank">employee progress bar.)</a> </figcaption>
+
+                </figure>
+               
+                <div class="content col-md-4 col-sm-12 col-xs-12">
+                 <a name="stations"></a>
+                    <h3 class="title">Manage Stations</h3>
+                    <div class="desc">
+                        <p>Think big! With our competitive pricing you can expand your plan to all of your stores. </p>
+                        <p>Review timeclocks, performance, and productivity using data reports. No more office politics and subjective management. View employee station activity throughout the day, adjust time intervals, or set by category of actions.</p>
+                            
+                            <p>Work with a daily to-do list and document progress with photos and voice notes. Track activities remotely and provide scheduling updates.</p>
+                    </div>                       
+                </div><!--//content-->
+            </div><!--//item-->
+
+
+          <div class="row item ">
+                <div class="content col-md-4 col-sm-12 col-xs-12">
+                <a name="delivery"></a>
+                    <h3 class="title">Delivery</h3>
+                
+                    <div class="desc">
+                        <p>Optimize your delivery routes. Save time and gasoline with GPS and delivery routes.</p>
+                        <p>Hodor hodor HODOR! Hodor hodor, hodor. Hodor hodor - HODOR hodor, hodor hodor hodor! </p>
+                    </div>                           
+                </div><!--//content-->
+                <figure class="figure col-md-7 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
+
+                    <%= responsive_image "features/delivery_phones.png", 'img-circle' %>
+
+                    <figcaption class="figure-caption">(Delivery app works on mobile. Built-in GPS and inventory)</a> </figcaption>
                 </figure>
             </div><!--//item-->
             
@@ -108,12 +185,11 @@
                     <div class="desc">
                         <p>Build trust by establishing a connection with your customers. Our Clothestracker software can let your users interact with you like never before. </p>
                         <p>They can leave notes, send texts, and login to their personal account to check the status of their dry-cleaning. No need to track them down, SMRT lets them come to you.</p>
-                        
                     </div>
                     
                     <div class="quote">
                         <div class="quote-profile">
-                        	<%= responsive_image "people/profile-s-4.png", 'img-circle' %>
+                            <%= responsive_image "people/profile-s-3.png", 'img-circle' %>
                         </div><!--//profile-->
                         <div class="quote-content">
                             <blockquote><p>SMRT lets me see where my clothes are during cleaning. Right now I have 4 items in pre-spot- I didn't even know they had stains!</p></blockquote>
@@ -122,11 +198,11 @@
                     </div><!--//quote-->
                 </div><!--//content-->
                 <figure class="figure col-md-7 col-sm-12 col-xs-12 col-md-pull-4 col-sm-pull-0 col-xs-pull-0">
-                	<%= responsive_image "people/bizman2.png" %>
+                    <%= responsive_image "people/redhead.png" %>
                 </figure>
             </div><!--//item-->
-            
-            
+
+    
             <div class="feature-lead text-center">
                 <h4 class="title">Want to discover all the features?</h4>
                 <p><a class="btn btn-cta btn-cta-secondary" href="features.html">Take a Tour</a></p>
@@ -150,7 +226,7 @@
                         <div class="content">
                             <blockquote>
                             <i class="fa fa-quote-left"></i>
-                            <p>We used Velocity as a front-end design template for our product site. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum elit tortor, consectetur vitae varius at, interdum eget libero. Morbi.</p>
+                            <p>We used SMRT as a front-end design template for our product site. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum elit tortor, consectetur vitae varius at, interdum eget libero. Morbi.</p>
                             </blockquote>
                             <p class="source">Kevin Knight<br /><span class="title">Co-Founder, Startup Hub</span></p>
                         </div><!--//content-->                         
@@ -182,40 +258,40 @@
     </section><!--//testimonials-->
 
     <!-- ******Press Section****** -->
-    <section class="section press">
+  <!--   <section class="section press">
         <div class="container text-center">
             <h2 class="title">Press Coverage</h2>
             <ul class="press-list list-inline row">
                 <li class="col-md-2 col-sm-2 col-xs-4"><a href="#"><%= responsive_image "press/press-1.png" %></a></li>
                 <li class="col-md-2 col-sm-2 col-xs-4"><a href="#"><%= responsive_image "press/press-2.png" %></a></li>
-                <li class="col-md-2 col-sm-2 col-xs-4 xs-break"><a href="#"><%= responsive_image "press/press-3.png" %></a></li>                   
-                <li class="col-md-2 col-sm-2 col-xs-4"><a href="#"><%= responsive_image "press/press-4.png" %></a></li>
+                <li class="col-md-2 col-sm-2 col-xs-4 xs-break"><a href="#"><%= responsive_image "press/press-3.png" %></a></li> -->                   
+              <!--   <li class="col-md-2 col-sm-2 col-xs-4"><a href="#"><%= responsive_image "press/press-4.png" %></a></li>
                 <li class="col-md-2 col-sm-2 col-xs-4"><a href="#"><%= responsive_image "press/press-5.png" %></a></li>
                 <li class="col-md-2 col-sm-2 col-xs-4"><a href="#"><%= responsive_image "press/press-6.png" %></a></li>                    
-            </ul><!--//press-list-->
-            <ul class="press-list list-inline row last">
+            </ul> --><!--//press-list-->
+           <!--  <ul class="press-list list-inline row last">
                 <li class="col-md-2 col-sm-2 col-xs-4"><a href="#"><%= responsive_image "press/press-7.png" %></a></li>
                 <li class="col-md-2 col-sm-2 col-xs-4"><a href="#"><%= responsive_image "press/press-8.png" %></a></li>
                 <li class="col-md-2 col-sm-2 col-xs-4 xs-break"><a href="#"><%= responsive_image "press/press-9.png" %></a></li>                   
                 <li class="col-md-2 col-sm-2 col-xs-4"><a href="#"><%= responsive_image "press/press-10.png" %></a></li>
                 <li class="col-md-2 col-sm-2 col-xs-4"><a href="#"><%= responsive_image "press/press-11.png" %></a></li>
                 <li class="col-md-2 col-sm-2 col-xs-4"><a href="#"><%= responsive_image "press/press-12.png" %></a></li>                    
-            </ul><!--//press-list-->
+            </ul> --><!--//press-list-->
             
-            <div class="press-lead text-center">
+           <!--  <div class="press-lead text-center">
                  <h3 class="title">Have press inquires?</h3>
                  <p class="press-links"><a href="#">Download our press kit</a> or <a href="contact.html">Get in touch</a></p>
-            </div>
+            </div> -->
            
-        </div><!--//container-->
-    </section><!--//press-->
+       <!--  </div> --><!--//container-->
+    <!-- </section> --><!--//press-->
 
     <!-- ******CTA Section****** -->
     <section id="cta-section" class="section cta-section text-center home-cta-section">
         <div class="container">
            <h2 class="title">Start your life with SMRT today.</h2>
            <p class="intro">More than <span class="counting">500</span> satisfied customers are using SMRT</p>
-           <p><a class="btn btn-cta btn-cta-primary" href="https://wrapbootstrap.com/theme/velocity-designed-for-products-WB0N38R04" target="_blank">Get SMRT Now</a></p>
+           <p><a class="btn btn-cta btn-cta-primary" href="signup.html" target="_blank">Get SMRT Now</a></p>
         </div><!--//container-->
     </section><!--//cta-section-->
         

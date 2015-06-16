@@ -349,15 +349,15 @@ select {
             display: block;
             height:780px;
             &.slide-1 {
-                background:@color-2 image-url('background/ar_cover1.png') no-repeat 50% top;
+                background:@color-2 image-url('background/automated_assembly.png') no-repeat 50% top;
                 .background-size(cover);
             }
             &.slide-2 {
-                background:@color-2 image-url('background/detail_cover.png') no-repeat 50% top;
+                background:@color-2 image-url('background/delivery_route_stuff.png') no-repeat 50% top;
                 .background-size(cover);
             }
             &.slide-3 {
-                background:@color-2 image-url('background/bg-header-3.jpg') no-repeat 50% top;
+                background:@color-2 image-url('background/pos_crm_inventory.png') no-repeat 50% top;
                 .background-size(cover);
             }
             
@@ -481,6 +481,8 @@ p{
 }
 
 .section-on-bg {
+    background-image: image-url('kellstuff/placeholder1.jpg');
+    background-size: cover;
     .title {
         color: #fff;
     }
@@ -490,22 +492,27 @@ p{
     }
 }
 
+.section-cover {
+   padding: 300px 20px;
+
+}
+
 /* ======= Why ======= */
 .why {
-    padding-top: 80px;
+    padding-top: 10px;
     padding-bottom: 80px;
     .title {
         font-size: 36px;
         font-weight: 300;
-        margin-top: 0;        
+        margin-top: 15px;        
     }
     .intro {
         color: @grey;
-        margin-bottom: 30px;
+        margin-bottom: 5px;
         font-size: 18px;
     }
     .item {
-        padding: 90px 0;
+        padding: 30px 0;
         border-bottom: 1px solid @divider;
         &.last-item {
             border-bottom: none;
@@ -741,7 +748,7 @@ p{
 
 /* ======= cta-section ======= */
 .cta-section {
-    background: @color-2 image-url('background/bg-footer-1.jpg') no-repeat left top;
+    background: @color-2 image-url('background/footer_3.png') no-repeat left top;
     background-size: cover;
     min-height: 420px;
     color: #fff;
@@ -749,11 +756,11 @@ p{
     border: none;
     
     &.pricing-cta-section {
-        background-image: image-url('background/bg-footer-2.jpg');
+        background-image: image-url('background/footer_1.png');
     }
     
     &.contact-cta-section {
-        background-image: image-url('background/bg-footer-3.jpg');
+        background-image: image-url('background/footer_3.png');
     }    
     
     .title {
@@ -952,14 +959,15 @@ p{
 /* ======= Steps ======= */
 .steps {
     background: @smoky-white;
-    padding-top: 80px;
-    padding-bottom: 120px;
-    
+    padding-top: 25px;
+    padding-bottom: 0px;
+    margin-bottom: 80px;
     .title {
         font-size: 36px;
         font-weight: 300;
-        margin-top: 0;  
-        margin-bottom: 60px;
+        margin-top: 25px;  
+        margin-bottom: 20px;
+    ;
     }
     
     .step {
