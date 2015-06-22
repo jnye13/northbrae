@@ -1,43 +1,5 @@
 
-
- <section>  
-        <div class="sections-cover">
-           <h2 class="title text-center">What can SMRT do for you?</h2>
-            <p class="intro text-center">Never worry about what's going right.</p>  
-            <div class="row item">
-                <div class="content col-md-3 col-sm-12 col-xs-12 text-center">
-                
-                <a href="#pos">
-                        <%= responsive_image "features/POS_screen.png" %>
-                        <h3 class="title text-center">SMRT POS</h3>
-                </a>
-                </div>    
-               
-                    <div class="content col-md-3 col-sm-12 col-xs-12">
-                    <a href="#card">
-                        <%= responsive_image "features/smrt_pay.png" %>
-                         <h3 class="title text-center">SMRT Pay</h3>
-                </a>    
-                </div> 
-
-                <div class="content col-md-3 col-sm-12 col-xs-12">
-                    <a href="#delivery">
-                        <%= responsive_image "features/delivery.png" %>
-                        <h3 class="title text-center">SMRT Delivery</h3>
-                      </a>
-                </div>     
-
-                 <div class="content col-md-3 col-sm-12 col-xs-12">
-                    <a href="#stations">
-                        <%= responsive_image "features/item_location.png" %>
-                         <h3 class="title text-center">SMRT Stations</h3>
-                    </a>
-                </div> 
-        </div>        
-</section>
-
-
-<div class="wrapper">
+<!-- <div class="wrapper">
     <div class="flexslider bg-slider">
         <ul class="slides">
             <li class="slide slide-1"></li>
@@ -45,17 +7,58 @@
             <li class="slide slide-3"></li>
         </ul>
     </div>
-</div><!--//bg-slider-wrapper--> 
-
+</div><!--//bg-slider-wrapper-->  
 
 <section class="promo section section-on-bg">
     <div class="container text-center">                
-        <h2 class="title">Work Smarter</h2>
+        <h1 class="title">Work Smarter</h1>
        <!--  <p class="intro">SMRT is designed to make it so you never have to worry about your company<br/>let us take care of it for you.</p> -->
         <p><a class="btn btn-cta btn-cta-primary" href="/signup">Get SMRT</a></p>   
-        <button type="button" class="play-trigger btn-link " data-toggle="modal" data-target="#modal-video" ><i class="fa fa-youtube-play"></i> Watch the video</button>
+       <!--  <button type="button" class="play-trigger btn-link " data-toggle="modal" data-target="#modal-video" ><i class="fa fa-youtube-play"></i>Watch Video</button> -->
     </div><!--//container-->
 </section><!--//promo-->
+
+
+
+ <section>  
+        <div class="sections-features">
+           <h2 class="title text-center">SMRT Features</h2>  
+                <div class="row item row-center text-center">
+               <!--  <div class="content col-md-2 col-sm-12 col-xs-12"></div> -->
+       
+                <div class="content col-md-3 col-sm-6 col-xs-6 feature-img col-centered">
+                    <a href="#card">
+                        <%= responsive_image "features/icon_smrt_payments1.png" %>
+                         <h3 class="title text-center">SMRT Pay</h3>
+                          <!--  <p class="intro text-center">Minimize costs and process faster.</p> -->
+                    </a>    
+                </div> 
+
+                <div class="content col-md-3 col-sm-6 col-xs-6 feature-img col-centered"> 
+                    <a href="#pos">
+                        
+                        <%= responsive_image "features/icon_pos1.png" %>
+                        
+                        <h3 class="title text-center">SMRT POS</h3>
+                    </a>
+                </div>    
+
+                <div class="content col-md-3 col-sm-6 col-xs-6 feature-img col-centered">
+                    <a href="#stations">
+                        <%= responsive_image "features/icon_stations.png" %>
+                         <h3 class="title text-center">SMRT Stations</h3>
+                    </a>
+                   <!--  <div class="content col-md-2 col-sm-6 col-xs-4"></div> -->
+                  </div>
+                  
+                <div class="content col-md-3 col-sm-6 col-xs-6 feature-img col-centered">
+                    <a href="#delivery">
+                        <%= responsive_image "features/icon_delivery.png" %>
+                        <h3 class="title text-center">SMRT Delivery</h3>
+                      </a>
+                </div>          
+        </div>        
+</section> 
 
             
 <div class="sections-wrapper">
@@ -67,20 +70,25 @@
                     <figcaption class="figure-caption">(accounting, sceduling, customers &amp; progress) </figcaption>
                 </figure> -->
             <!-- </div> --><!--//item-->
-            
+           <span class="anchor" id="pos"></span>
              <div class="row item">
                 <div class="content col-md-4 col-sm-12 col-xs-12">
-                <a name="pos"></a>  
                     <h3 class="title">SMRT POS</h3>
                     <div class="desc">
                         <p>Find every customer instantly in our POS portal. Keep credit cards on file and set up automatic billing.</p>
                         <p>Find customers instanly. Enable automatic invoices and billing to cut down mistakes made with cash.</p>
                         <p>Fees from credit card companies can pile up. We'll help you save on processing fees as soon as you join and provide complete transparency to what fees are collected for each transaction.
+
+                         <ul class="list-unstyled">
+                                <li><i class="fa fa-star"></i>Find customers by name.</li>
+                                <li><i class="fa fa-star"></i>Accept cash, credit, debit, even check if you'd like.</l>
+                                <li><i class="fa fa-star"></i>Customer wardrobes are on file- find anyone's shirt.</li>
+                            </ul>
                     </div>                         
                 </div><!--//content-->
                 <figure class="figure col-md-7 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
 
-                    <%= responsive_image "features/pos_crm_inventory_small.png", 'img-circle' %>
+                    <%= responsive_image "features/POS_screen_slate.png" %>
 
                     <figcaption class="figure-caption">(Screenshot: <a href="http://background/accounting_sheets.png" target="_blank">POS customer profile)</a> </figcaption>
 
@@ -93,12 +101,12 @@
                     <div class="desc">
                         <p>For just $4,500 you can get a system that assembles for you. You get 2 free tablets loaded with SMRT technology and an assembly rack. Save time and money by investing in an assembly rack that does the work for you.</p>
                         <p>Package inventory dynamically with less physical space using Auto-Assembly. Orders assemble and self-sort relative to your production capacity to prevent overflow. Our system is compatible with Assisted-Assembly or Metalprogetti Systems™.</p>
-                            <ul class="list-unstyled">
+                            <!-- <ul class="list-unstyled">
                                 <li><i class="fa fa-star"></i>Don't waste time manually sorting.</li>
                                 <li><i class="fa fa-star"></i>Be more accurate with cusomter-specific profiles.</l>
                                 <li><i class="fa fa-star"></i>Rotates to your location- all you have to do is stand there and hang clothes!</li>
                                 <li><i class="fa fa-star"></i>Prevent late orders.</li>
-                            </ul>
+                            </ul> -->
                             
                             <p>SMRT assembly will maximize your time and minimize your effort.  </p>
                     </div>
@@ -122,9 +130,10 @@
                 </figure>
             </div><!--//item-->
 
+            <span class="anchor" id="card"></span> 
              <div class="row item ">
+              <div class="filler"></div> 
                 <div class="content col-md-4 col-sm-12 col-xs-12">
-                 <a name="card"></a>
                     <h3 class="title">SMRT Pay</h3>
                     <div class="cc">
                         <p>Fees from credit card companies can pile up. We'll help you save on processing fees as soon as you join and provide complete transparency to what fees are collected for each transaction.</p>
@@ -133,23 +142,23 @@
                 </div><!--//content-->
                 <figure class="figure col-md-7 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
 
-                    <%= responsive_image "features/credit_card.png", 'img-circle' %>
+                    <%= responsive_image "features/credit_card.png" %>
 
                     <figcaption class="figure-caption">(<a href="http://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-for-startups-tempo/?ref=3wm" target="_blank">Credit card processing is built-in)</a> </figcaption>
                 </figure>
             </div><!--//item-->
             
             <div class="row item ">
+            <div class="filler"></div>
               <figure class="figure col-md-7 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
 
-                    <%= responsive_image "background/accounting_sheets.png", 'img-circle' %>
+                    <%= responsive_image "features/stations_manage.png" %>
 
                     <figcaption class="figure-caption">(Screenshot: <a href="http://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-for-startups-tempo/?ref=3wm" target="_blank">employee progress bar.)</a> </figcaption>
-
                 </figure>
                
+                <span class="anchor" id="stations"></span>
                 <div class="content col-md-4 col-sm-12 col-xs-12">
-                 <a name="stations"></a>
                     <h3 class="title">Manage Stations</h3>
                     <div class="desc">
                         <p>Think big! With our competitive pricing you can expand your plan to all of your stores. </p>
@@ -160,7 +169,7 @@
                 </div><!--//content-->
             </div><!--//item-->
 
-
+          <span class="anchor" id="delivery"></span>
           <div class="row item ">
                 <div class="content col-md-4 col-sm-12 col-xs-12">
                 <a name="delivery"></a>
@@ -173,13 +182,14 @@
                 </div><!--//content-->
                 <figure class="figure col-md-7 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
 
-                    <%= responsive_image "features/delivery_phones.png", 'img-circle' %>
+                    <%= responsive_image "features/delivery_model.png" %>
 
                     <figcaption class="figure-caption">(Delivery app works on mobile. Built-in GPS and inventory)</a> </figcaption>
                 </figure>
             </div><!--//item-->
             
             <div class="row item last-item">
+                <div class="filler"></div> 
                 <div class="content col-md-4 col-sm-12 col-xs-12 col-md-push-8 col-sm-push-0 col-xs-push-0">
                     <h3 class="title">Connect with your customers.</h3>
                     <div class="desc">
@@ -189,7 +199,7 @@
                     
                     <div class="quote">
                         <div class="quote-profile">
-                            <%= responsive_image "people/profile-s-3.png", 'img-circle' %>
+                            <%= responsive_image "people/profile-s-3.png" %>
                         </div><!--//profile-->
                         <div class="quote-content">
                             <blockquote><p>SMRT lets me see where my clothes are during cleaning. Right now I have 4 items in pre-spot- I didn't even know they had stains!</p></blockquote>

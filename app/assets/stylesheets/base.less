@@ -466,10 +466,12 @@ p{
 }
 
 /* ======= sections-wrapper ======= */   
+
 .sections-wrapper {
     background: #fff;
     z-index: 20;
     position: relative;
+
 }
 .section .intro {
     max-width: 700px;
@@ -481,8 +483,10 @@ p{
 }
 
 .section-on-bg {
-    background-image: image-url('kellstuff/placeholder1.jpg');
+    background-image: image-url('background/footer_4.png');
     background-size: cover;
+    background-color: #253340;
+
     .title {
         color: #fff;
     }
@@ -491,12 +495,24 @@ p{
         .opacity(0.8);
     }
 }
-
-.section-cover {
-   padding: 300px 20px;
+.section-features {
+    .row-centered {
+    text-align: center;
+    }
+    .col-centered {
+    display: inline-block;
+    float: none;
+    } 
+    margin-bottom: 100px;
+    border-bottom: 1px solid #efefef;
 
 }
-
+   
+.feature-img{
+    max-width: 20%;
+    margin: auto 2.5%;
+   
+    }
 /* ======= Why ======= */
 .why {
     padding-top: 10px;
@@ -748,7 +764,7 @@ p{
 
 /* ======= cta-section ======= */
 .cta-section {
-    background: @color-2 image-url('background/footer_3.png') no-repeat left top;
+    background: @color-2 image-url('background/footer_7.png') no-repeat left top;
     background-size: cover;
     min-height: 420px;
     color: #fff;
@@ -756,11 +772,12 @@ p{
     border: none;
     
     &.pricing-cta-section {
-        background-image: image-url('background/footer_1.png');
+        background-image: image-url('background/footer_7.png');
     }
     
     &.contact-cta-section {
-        background-image: image-url('background/footer_3.png');
+        background-image: image-url('background/footer_6.png');
+        background-position: center-bottom;
     }    
     
     .title {
@@ -1015,7 +1032,7 @@ p{
     padding-top: 170px;
     position: relative;
     z-index: 10;
-    
+    margin-bottom: -100px;
     .title {
         font-size: 36px;
         font-weight: 300;
@@ -2725,3 +2742,16 @@ p{
         }
     }
 }
+
+
+/*-----Anchor-----*/
+
+.anchor{
+  display: block;
+  height: 80px; /*same height as header*/
+  margin-top: -80px; /*same height as header*/
+  visibility: hidden;
+}
+
+
+
