@@ -1,6 +1,6 @@
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap.min
+//= require bootstrap
 //= require cbpAnimatedHeader
 //= require classie
 //= require froogaloop2.min
