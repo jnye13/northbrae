@@ -1,0 +1,84 @@
+  <div class="modal fade" id="requestDemoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content"style="text-align: center;">
+                    <div class="modal-header"style="text-align: center;">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Request demo</h4>
+                    </div>
+                    <%= form_tag "/request_demo", :method => "POST", :class =>"form-horizontal", :id => "requestDemoForm" do %>
+                    <div class="modal-body"style="text-align: right;">
+                            
+                            <div class="form-group">
+                                <label class="col-sm-4 form-label" for="inputName">First Name</label>
+                                <div class="col-sm-8">
+                                    <%= text_field(:request_demo, :firstName, :placeholder=>"First name", :required => true, :class => "form-control") %>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-4 form-label" for="inputName">Last Name</label>
+                                <div class="col-sm-8">
+                                    <%= text_field(:request_demo, :lastName, :placeholder=>"Last name", :required => true, :class => "form-control") %>
+                                 </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-4 form-label" for="inputCompany">Company</label>
+                                <div class="col-sm-8">
+                                    <%= text_field(:request_demo, :company, :placeholder=>"Company", :required => true, :class => "form-control") %>
+                                 </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-4 form-label" for="inputEmail">Email</label>
+                                <div class="col-sm-8">
+                                    <%= email_field(:request_demo, :email, :placeholder=>"Email", :required => true, :class => "form-control") %>
+                                 </div>
+                            </div>
+
+                            <p id="email_validation_error"style="display:none; color:red;"> The email is incorrect </p>
+
+                            <div class="form-group">
+                                <label class="col-sm-4 form-label" for="inputPhone">Phone</label>
+                                <div class="col-sm-8">
+                                    <%= phone_field(:request_demo, :phone, :placeholder=>"Phone", :required => true, :class => "form-control") %>
+                                 </div>
+                            </div>
+                </div>
+                    <div class="modal-footer"style="text-align: center;">
+                        <div class="form-group">
+                            <div class="" style="padding-top: 10px;">
+                                <button id="btn-request-demo-submit"  type="submit" class="btn btn-cta btn-cta-primary">Give me a demo!</button>
+                            </div>
+                        </div>
+                        <% end %>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="thankYouModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content"style="text-align: center;">
+                    <div class="modal-header"style="text-align: center;">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Thank you</h4>
+                    </div>
+                    <div class="modal-body"style="text-align: right;">
+                        We will contact you as soon as possible.
+                </div>
+                    <div class="modal-footer"style="text-align: center;">
+                        <div class="form-group">
+                            <div class="" style="padding-top: 10px;">
+                                <button type="submit" data-dismiss="modal" data-target="thankYouModal" class="btn btn-cta btn-cta-primary">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <li class="nav-item nav-item-cta last"><a class="btn btn-cta btn-cta-secondary" data-toggle="modal" data-target="#requestDemoModal" href="#">Request Demo</a></li>

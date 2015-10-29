@@ -7,16 +7,17 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
+    <meta name="description" content="SMRT Systems, the better POS">
     <meta name="author" content="">
 
     <link rel="shortcut icon" href="smrt_logo_grey.png">
 
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,900,900italic,300italic,300' rel='stylesheet' type='text/css'> 
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="<%= asset_path 'smrt_logo_sm.png' %>" class="nav-icon">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
@@ -34,253 +35,94 @@
     </script>
 
 </head>
-<body class="<%= @page_body_cls %>">
+<body id="page-top" class="<%= @page_body_cls %>">
 
-	<header id="header" class="header navbar-fixed-top">  
-	    <div class="container">       
-	        <h1 class="logo">
-	            <a href="/"><span class="text">SMRT</span></a>
-	        </h1><!--//logo-->
-	        <nav class="main-nav navbar-right" role="navigation">
-	            <div class="navbar-header">
-	                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse">
-	                    <span class="sr-only">Toggle navigation</span>
-	                    <span class="icon-bar"></span>
-	                    <span class="icon-bar"></span>
-	                    <span class="icon-bar"></span>
-	                </button><!--//nav-toggle-->
-	            </div><!--//navbar-header-->
-	            <div id="navbar-collapse" class="navbar-collapse collapse">
-	                <ul class="nav navbar-nav">
-
-	                    <%= nav_item 'Home', '/', 'website#index' %>
-	                <!--     <%= nav_item 'Features', '/features', 'website#features' %> -->
-	                    <%= nav_item 'Pricing', '/pricing', 'website#pricing' %>
-	                    
-	                    <li class="nav-item dropdown">
-	                        <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="#">About Us <i class="fa fa-angle-down"></i></a>
-	                        <ul class="dropdown-menu">
-
-	                        	<%= nav_item 'Team', '/team', 'website#team' %>
-	                        	<%= nav_item 'Press', '/press', 'website#press' %>
-	                        	<%= nav_item 'Jobs', '/jobs', 'website#jobs' %>
-	                        	<%= nav_item 'Contact us', '/contact', 'website#contact' %>
-	                        </ul>                            
-	                    </li>
-	                                        
-	                    <li class="nav-item nav-item-cta last"><a class="btn btn-cta btn-cta-secondary" data-toggle="modal" data-target="#requestDemoModal" href="#">Request Demo</a></li>
-	                </ul><!--//nav-->
-	            </div><!--//navabr-collapse-->
-	        </nav><!--//main-nav-->                     
-	    </div><!--//container-->
-
-
-
-
-
-
-	</header><!--//header-->
-
-     <!-- Modal -->
-        <div class="modal fade" id="requestDemoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content"style="text-align: center;">
-                    <div class="modal-header"style="text-align: center;">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Request demo</h4>
-                    </div>
-                    <%= form_tag "/request_demo", :method => "POST", :class =>"form-horizontal", :id => "requestDemoForm" do %>
-                    <div class="modal-body"style="text-align: right;">
-                            
-                            <div class="form-group">
-                                <label class="col-sm-4 form-label" for="inputName">First Name</label>
-                                <div class="col-sm-8">
-                                    <%= text_field(:request_demo, :firstName, :placeholder=>"First name", :required => true, :class => "form-control") %>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-4 form-label" for="inputName">Last Name</label>
-                                <div class="col-sm-8">
-                                    <%= text_field(:request_demo, :lastName, :placeholder=>"Last name", :required => true, :class => "form-control") %>
-                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-4 form-label" for="inputCompany">Company</label>
-                                <div class="col-sm-8">
-                                    <%= text_field(:request_demo, :company, :placeholder=>"Company", :required => true, :class => "form-control") %>
-                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-4 form-label" for="inputEmail">Email</label>
-                                <div class="col-sm-8">
-                                    <%= email_field(:request_demo, :email, :placeholder=>"Email", :required => true, :class => "form-control") %>
-                                 </div>
-                            </div>
-
-                            <p id="email_validation_error"style="display:none; color:red;"> The email is incorrect </p>
-
-                            <div class="form-group">
-                                <label class="col-sm-4 form-label" for="inputPhone">Phone</label>
-                                <div class="col-sm-8">
-                                    <%= phone_field(:request_demo, :phone, :placeholder=>"Phone", :required => true, :class => "form-control") %>
-                                 </div>
-                            </div>
-                </div>
-                    <div class="modal-footer"style="text-align: center;">
-                        <div class="form-group">
-                            <div class="" style="padding-top: 10px;">
-                                <button id="btn-request-demo-submit"  type="submit" class="btn btn-cta btn-cta-primary">Give me a demo!</button>
-                            </div>
-                        </div>
-                        <% end %>
-                    </div>
-                </div>
-            </div>
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand page-scroll" href="#page-top"><img src="<%= asset_path("smrt_logo_sm.png") %>" class="nav-logo" alt="smrt systems logo" style=" display: inline; margin-right: 5px;">SMRT Systems</a>
         </div>
 
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+            
+                <li>
+                    <a class="page-scroll " href="#features">Features</a>
+                </li>
+                <li>
+                    <a class="page-scroll " href="#about">About</a>
+                </li>
+                <li>
+                    <a class="page-scroll " href="#video">Video</a>
+                </li> 
+                  <li>
+                    <a class="page-scroll " href="#pricing">Pricing</a>
+                </li>
+                <li>
+                    <a class=" page-scroll " href="/faq">FAQs</a>
+                </li>       
+                 <li>
+                    <a class="page-scroll " href="#contact">Contact</a>
+                </li>
+               <!--  <li>
+                    <a class="page-scroll " href="#">Invest</a>
+                </li> -->
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
 
-        <!-- Modal -->
-        <div class="modal fade" id="thankYouModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content"style="text-align: center;">
-                    <div class="modal-header"style="text-align: center;">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Thank you</h4>
-                    </div>
-                    <div class="modal-body"style="text-align: right;">
-                        We will contact you as soon as possible.
+<%= yield %>
+
+<section class="bg-primary" id="contact">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h2 class="section-heading">Contact</h2>
+                <hr class="primary">
+
+                <div class="col-lg-4 text-center">
+                    <i class="fa fa-phone fa-3x wow"></i>
+                    <p><a href="tel:1-415-612-9885">+1(415) 612-9885</a></p>    
                 </div>
-                    <div class="modal-footer"style="text-align: center;">
-                        <div class="form-group">
-                            <div class="" style="padding-top: 10px;">
-                                <button type="submit" data-dismiss="modal" data-target="thankYouModal" class="btn btn-cta btn-cta-primary">Close</button>
-                            </div>
-                        </div>
-                    </div>
+
+                <div class="col-lg-4 text-center">   
+                    <p>1847 Belles St<br>San Francisco<br>CA 49129</p>
                 </div>
+
+                <div class="col-lg-4 text-center"  >
+                    <i class="fa fa-envelope-o fa-3x wow"></i>
+                    <p><a href="mailto:bill@smrtsystems.com">Send us a message</a></p>
+                </div>
+
+            </div> 
+            <div class="col-lg-8 col-lg-offset-2 text-center"><h6>copyright SMRT Systems 2015 all rights reserved</h6></div>                  
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container_12">
+        <div class="grid_12">
+          <div class="social_links">
+            <a href="https://www.facebook.com/smrtsystems?fref=ts" target="_blank"><img src="<%= asset_path("FB-Icon.png") %>" alt="Facebook" /></a>
+            <a href="https://twitter.com/smrtsystems" target="_blank"><img src="<%= asset_path("twitter-icon.png") %>" alt="Twitter" /></a> 
             </div>
         </div>
+    </div>
+</footer>
 
-	<%= yield %>
-
-	    <!-- ******FOOTER****** --> 
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="container">
-                <div class="row">                    
-                    <div class="footer-col links col-md-2 col-sm-4 col-xs-12">
-                        <div class="footer-col-inner">
-                            <h3 class="title">About us</h3>
-                            <ul class="list-unstyled">
-                                <li><a href="#"><i class="fa fa-caret-right"></i>Who we are</a></li>
-                                <li><a href="#"><i class="fa fa-caret-right"></i>Press</a></li>
-                                <li><a href="#"><i class="fa fa-caret-right"></i>Blog</a></li>
-                                <li><a href="#"><i class="fa fa-caret-right"></i>Jobs</a></li>
-                                <li><a href="#"><i class="fa fa-caret-right"></i>Contact us</a></li>
-                            </ul>
-                        </div><!--//footer-col-inner-->
-                    </div><!--//foooter-col-->    
-                    <div class="footer-col links col-md-2 col-sm-4 col-xs-12">
-                        <div class="footer-col-inner">
-                            <h3 class="title">Product</h3>
-                            <ul class="list-unstyled">
-                                <li><a href="#"><i class="fa fa-caret-right"></i>How it works</a></li>
-                                <li><a href="#"><i class="fa fa-caret-right"></i>API</a></li>
-                                <li><a href="#"><i class="fa fa-caret-right"></i>Download Apps</a></li>
-                                <li><a href="#"><i class="fa fa-caret-right"></i>Pricing</a></li>
-                            </ul>
-                        </div><!--//footer-col-inner-->
-                    </div><!--//foooter-col-->              
-                    <div class="footer-col links col-md-2 col-sm-4 col-xs-12 sm-break">
-                        <div class="footer-col-inner">
-                            <h3 class="title">Support</h3>
-                            <ul class="list-unstyled">
-                                <li><a href="#"><i class="fa fa-caret-right"></i>Help</a></li>
-                                <li><a href="#"><i class="fa fa-caret-right"></i>Documentation</a></li>
-                                <li><a href="#"><i class="fa fa-caret-right"></i>Terms of services</a></li>
-                                <li><a href="#"><i class="fa fa-caret-right"></i>Privacy</a></li>
-                            </ul>
-                        </div><!--//footer-col-inner-->            
-                    </div><!--//foooter-col-->   
-                    <div class="footer-col connect col-md-6 col-sm-12 col-xs-12">
-                        <div class="footer-col-inner">
-                            <!-- <ul class="social list-inline">
-                                <li><a href="https://twitter.com/3rdwave_themes" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>        
-                                <li class="row-end"><a href="#"><i class="fa fa-rss"></i></a></li>             
-                            </ul> -->
-                            <div class="form-container">
-                                <p class="intro">Stay up to date with the latest news and offers from SMRT</p>
-                                <form class="signup-form navbar-form">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Enter your email address">
-                                    </div>   
-                                    <button type="submit" class="btn btn-cta btn-cta-primary">Subscribe Now</button>                                 
-                                </form>                               
-                            </div><!--//subscription-form-->
-                        </div><!--//footer-col-inner-->
-                    </div><!--//foooter-col-->
-                    <div class="clearfix"></div> 
-                </div><!--//row-->
-                <div class="row has-divider">
-                    <div class="footer-col download col-md-6 col-sm-12 col-xs-12">
-                        <div class="footer-col-inner">
-                            <h3 class="title">Mobile apps</h3>
-                            <ul class="list-unstyled download-list">
-                              <!--   <li><a class="btn btn-ghost" href="#"><i class="fa fa-apple"></i><span class="text">Download for iOS</span> </a></li> -->
-                                <li><a class="btn btn-ghost" href="#"><i class="fa fa-android"></i><span class="text">Download for Android</span></a></li>
-                               <!--  <li><a class="btn btn-ghost" href="#"><i class="fa fa-windows"></i><span class="text">Windows coming soon...</span></a></li> -->
-                            </ul>
-                        </div><!--//footer-col-inner-->
-                    </div><!--//download-->
-                    <div class="footer-col contact col-md-6 col-sm-12 col-xs-12">
-                        <div class="footer-col-inner">
-                            <h3 class="title">Contact us</h3>                          
-                            <p class="adr clearfix">
-                                <i class="fa fa-map-marker pull-left"></i>        
-                                <span class="adr-group pull-left">       
-                                    <span class="street-address">1847 Belles St</span><br>
-                                    <span class="region">San Francisco, CA</span><br>
-                                    <span class="postal-code">94129</span><br>
-                                    <span class="country-name">USA</span>
-                                </span>
-                            </p>
-                            <p class="tel"><i class="fa fa-phone"></i>(415) 612-9885</p>
-                            <p class="email"><i class="fa fa-envelope-o"></i><a href="#">sales@smrtsystems.com</a></p> 
-                            <!-- <a href="https://twitter.com/3rdwave_themes" class="twitter-follow-button" data-show-count="false">Follow @3rdwave_themes</a> -->
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>                        
-                        </div><!--//footer-col-inner-->
-                    </div><!--//contact-->
-                </div>
-            </div><!--//container-->
-        </div><!--//footer-content-->
-        <div class="bottom-bar">
-            <div class="container">
-                <small class="copyright">Copyright &copy; <%= Time.new.year %> SMRT Systems Inc</small>                
-            </div><!--//container-->
-        </div><!--//bottom-bar-->
-    </footer><!--//footer-->
-
-    <!-- Video Modal -->
-    <div class="modal modal-video" id="modal-video" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 id="videoModalLabel" class="modal-title sr-only">Video Tour</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="video-container">
-                        <iframe id="vimeo-video" src="//player.vimeo.com/video/129588559?color=ffffff&amp;wmode=transparent" width="720" height="405" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    </div><!--//video-container-->
-                </div><!--//modal-body-->
-            </div><!--//modal-content-->
-        </div><!--//modal-dialog-->
-    </div><!--//modal-->
-
-
-
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>
 </html>
