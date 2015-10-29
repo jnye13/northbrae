@@ -155,11 +155,10 @@ header {
     /* text-align: center;*/
     color: #000;
     background-image: image-url("snowy-forest.png");
- 
     background-color: #fff;
-    background-attachment: fixed;
+
     z-index: 1;
-    -webkit-background-size: cover;
+   -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
@@ -182,8 +181,8 @@ header .header-content .header-content-inner h1 {
    
     text-transform: uppercase;
     font-weight: 200;
-   /* text-shadow: 2px 2px 3px #777;
-*/}
+    text-shadow: 2px 2px 3px #aaa;
+}
 
 header .header-content .header-content-inner hr {
     margin: 5px auto;
@@ -279,6 +278,8 @@ header .header-content .header-content-inner p {
 
     header {
         height: 85%;
+        background-image: image-url("snowy-forest.png");
+        background-attachment: fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         background-size: cover;
@@ -302,6 +303,7 @@ header .header-content .header-content-inner p {
         margin-bottom: 50px;
         max-width: 1000px;
         font-size: 72px;
+        text-shadow: none;
     }
 
     header .header-content .header-content-inner p {
