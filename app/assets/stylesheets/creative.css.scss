@@ -114,7 +114,7 @@ aside {
     font-family: Open Sans, Helvetica Neue, Arial, sans-serif;
     font-weight: 700;
     color: #315c93;
-    height: 80px;
+    height: 50px;
 }
 
 .navbar-default .navbar-header .navbar-brand:hover,
@@ -150,19 +150,19 @@ aside {
 
 header {
     width: 100%;
-    height: 80%;
+    height: 90%;
     min-height: auto;
     /* text-align: center;*/
     color: #000;
     background-image: image-url("snowy-forest.png");
-    background-position: top;
+ 
     background-color: #fff;
     background-attachment: fixed;
     z-index: 1;
     -webkit-background-size: cover;
     -moz-background-size: cover;
-    background-size: cover;
     -o-background-size: cover;
+    background-size: cover;
 
 
 
@@ -230,6 +230,7 @@ header .header-content .header-content-inner p {
  {
        font-size: 21px;
        padding: 30px 15px;
+       height: 80px;
     }
 
     .navbar-default .navbar-header .navbar-brand:hover,
