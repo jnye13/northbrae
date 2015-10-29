@@ -3,6 +3,10 @@ class WebsiteController < ApplicationController
 		@page_body_cls = "index"
 	end
 
+	def faqs
+		@page_body_cls = "faqs"
+	end
+
 	def pricing
 	end
 

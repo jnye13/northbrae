@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :request_demo
 
   get '/features' => 'website#features'
+  get '/faqs' => 'website#faqs'
+
   get '/pricing' => 'website#pricing'
 
   get '/about-us' => 'website#about'
