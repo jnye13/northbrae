@@ -114,7 +114,7 @@ aside {
     font-family: Open Sans, Helvetica Neue, Arial, sans-serif;
     font-weight: 700;
     color: #315c93;
-    height: 80px;
+    height: 50px;
 }
 
 .navbar-default .navbar-header .navbar-brand:hover,
@@ -150,19 +150,18 @@ aside {
 
 header {
     width: 100%;
-    height: 80%;
+    height: 90%;
     min-height: auto;
     /* text-align: center;*/
     color: #000;
     background-image: image-url("snowy-forest.png");
-    background-position: top;
     background-color: #fff;
-    background-attachment: fixed;
+
     z-index: 1;
-    -webkit-background-size: cover;
+   -webkit-background-size: cover;
     -moz-background-size: cover;
-    background-size: cover;
     -o-background-size: cover;
+    background-size: cover;
 
 
 
@@ -182,8 +181,8 @@ header .header-content .header-content-inner h1 {
    
     text-transform: uppercase;
     font-weight: 200;
-   /* text-shadow: 2px 2px 3px #777;
-*/}
+    text-shadow: 2px 2px 3px #aaa;
+}
 
 header .header-content .header-content-inner hr {
     margin: 5px auto;
@@ -230,6 +229,7 @@ header .header-content .header-content-inner p {
  {
        font-size: 21px;
        padding: 30px 15px;
+       height: 80px;
     }
 
     .navbar-default .navbar-header .navbar-brand:hover,
@@ -278,6 +278,8 @@ header .header-content .header-content-inner p {
 
     header {
         height: 85%;
+        background-image: image-url("snowy-forest.png");
+        background-attachment: fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         background-size: cover;
@@ -301,6 +303,7 @@ header .header-content .header-content-inner p {
         margin-bottom: 50px;
         max-width: 1000px;
         font-size: 72px;
+        text-shadow: none;
     }
 
     header .header-content .header-content-inner p {
