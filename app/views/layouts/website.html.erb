@@ -60,27 +60,21 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
             
-                <li>
-                    <a class="page-scroll " href="/#features">Features</a>
-                </li>
-                <li>
-                    <a class="page-scroll " href="/#about">About</a>
-                </li>
-                <li>
-                    <a class="page-scroll " href="/#video">Video</a>
-                </li> 
-                  <li>
-                    <a class="page-scroll " href="/#pricing">Pricing</a>
-                </li>
-                <li>
-                    <a class=" page-scroll " href="/faqs">FAQs</a>
-                </li>       
-                 <li>
-                    <a class="page-scroll " href="/#contact">Contact</a>
-                </li>
-               <!--  <li>
-                    <a class="page-scroll " href="#">Invest</a>
-                </li> -->
+                <% if @page_body_cls == 'index' %>
+                    <li><a class="page-scroll " href="#features">Features</a></li>
+                    <li><a class="page-scroll " href="#about">About</a></li>
+                    <li><a class="page-scroll " href="#video">Video</a></li> 
+                    <li><a class="page-scroll " href="#pricing">Pricing</a></li>
+                    <li><a class=" page-scroll " href="/faqs">FAQs</a></li>       
+                    <li><a class="page-scroll " href="#contact">Contact</a></li>
+                <% elsif @page_body_cls == 'faqs' %>
+                    <li><a class="page-scroll " href="/#features">Features</a></li>
+                    <li><a class="page-scroll " href="/#about">About</a></li>
+                    <li><a class="page-scroll " href="/#video">Video</a></li> 
+                    <li><a class="page-scroll " href="/#pricing">Pricing</a></li>
+                    <li class="active"><a class="page-scroll" href="/faqs">FAQs</a></li>       
+                    <li><a class="page-scroll " href="/#contact">Contact</a></li>
+                <% end %>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
