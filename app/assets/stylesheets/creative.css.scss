@@ -626,9 +626,27 @@ footer{
 }
 
 .player{
-        width:500px; height:281px;
+        width:100%;
 }
-    
+
+@media(min-width:480px) {
+    .player{
+        height:260px;
+    }    
+}
+
+@media(min-width:768px) {
+    .player{
+        height:410px;
+    }    
+}
+
+@media(min-width:992px) {
+    .player{
+        width:900px; height:505.8px;
+    }    
+}
+
 @media(min-width:1000px) {
    .player{
         width:900px; height:505.8px;
