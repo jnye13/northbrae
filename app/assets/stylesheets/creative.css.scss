@@ -87,7 +87,7 @@ p {
 }
 
 section {
-    padding-top: 50px;
+    padding-top: 80px;
     padding-bottom: 50px;
 }
 
@@ -156,29 +156,24 @@ header {
     color: #000;
     background-image: image-url("snowy-forest.png");
     background-color: #fff;
-
     z-index: 1;
    -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-
-
-
 }
 
 header .header-content {
     position: relative;
     width: 100%;
-    padding: 25px 15px;
+    padding: 10px 15px;
     text-align: left;
     float: left;
 }
 
 header .header-content .header-content-inner h1 {
-    margin-top: 80px;
-    margin-bottom: 20px;
-   
+    margin-top: 50px;
+    margin-bottom: 10px;
     text-transform: uppercase;
     font-weight: 200;
     text-shadow: 2px 2px 3px #aaa;
@@ -299,6 +294,7 @@ header .header-content .header-content-inner p {
     }
 
     header .header-content .header-content-inner h1{
+        margin-top: 80px;
         margin-right: auto;
         margin-bottom: 50px;
         max-width: 1000px;
@@ -313,11 +309,6 @@ header .header-content .header-content-inner p {
     }
 }
 
-.nav-logo {
-    max-height: 18px;
-}
-
-
 
 @media(min-width:992px) {
     .service-box {
@@ -329,9 +320,10 @@ header .header-content .header-content-inner p {
     margin-bottom: 0;
 }
 
+
 #video{
     padding-top: 100;
-    list-style: none;
+    list-style: none;  
 }
 
 .portfolio-box {
@@ -464,7 +456,6 @@ fieldset[disabled] .btn-default.active {
 }
 
 .btn-primary {
-    top-margin: 20px;
     border-color: #fff;
     color: #fff;
     background-color: #315c93;
@@ -644,8 +635,6 @@ footer{
     }
 }
 
-/*--faqs--*/
-.faqs-sect {
-    margin-top: 5%;
-}
+
+
 
