@@ -55,13 +55,14 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand page-scroll" href="#page-top"><img src="<%= asset_path("smrt_logo_sm.png") %>" class="nav-logo" alt="smrt systems logo" style=" display: inline; margin-right: 5px;">SMRT Systems</a>
+            <a class="navbar-brand page-scroll" href="#page-top"><img src="<%= asset_path("smrt_logo_sm.png") %>" class="nav-logo" alt="smrt systems logo" style=" display: inline; margin-right: 5px;">SMRT Systems<br><span class="perf">powerful POS</span></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
             
+<!--<<<<<< HEAD
                 <li>
                     <a class="page-scroll" href="/#features">Features</a>
                 </li>
@@ -83,6 +84,23 @@
                <!--  <li>
                     <a class="page-scroll " href="#">Invest</a>
                 </li> -->
+
+                <% if @page_body_cls == 'index' %>
+                    <li><a class="page-scroll " href="#features">Features</a></li>
+                    <li><a class="page-scroll " href="#about">About</a></li>
+                    <li><a class="page-scroll " href="#video">Video</a></li> 
+                    <li><a class="page-scroll " href="#pricing">Pricing</a></li>
+                    <li><a class=" page-scroll " href="/faqs">FAQs</a></li>       
+                    <li><a class="page-scroll " href="#contact">Contact</a></li>
+                <% elsif @page_body_cls == 'faqs' %>
+                    <li><a class="page-scroll " href="/#features">Features</a></li>
+                    <li><a class="page-scroll " href="/#about">About</a></li>
+                    <li><a class="page-scroll " href="/#video">Video</a></li> 
+                    <li><a class="page-scroll " href="/#pricing">Pricing</a></li>
+                    <li class="active"><a class="page-scroll" href="/faqs">FAQs</a></li>       
+                    <li><a class="page-scroll " href="/#contact">Contact</a></li>
+                <% end %>
+<!-- origin/master-->
             </ul>
         </div>
         <!-- /.navbar-collapse -->
