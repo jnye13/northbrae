@@ -273,14 +273,14 @@ html[xmlns] .flexslider .slides {
   }
 }
 
-@media(max-width:463px) {
+@media(max-width:462px) {
   .player{
     height:180px;
     width:320px;
   }
 }
 
-@media(max-width:768px) {
+@media(min-width:463px) and (max-width:768px) {
   .player{
     height:260px;
     width:462px;
@@ -288,17 +288,17 @@ html[xmlns] .flexslider .slides {
 }
 
 
-@media(min-width:768px) {
+@media(min-width:768px) and (max-width:901px) {
     .player{
         height:410px;
         width:100%;
-    }    
+    }
 }
 
 @media(min-width:902px) {
     .player{
         width:900px; height:505.8px;
-    }    
+    }
 }
 
 
