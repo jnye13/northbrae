@@ -22,9 +22,6 @@ $(function() {
 				 var player1 = document.getElementById('player_1');
 				 $f(player1).addEvent('ready', ready);
 
-				 var player2 = document.getElementById('player_2');
-				 $f(player2).addEvent('ready', ready);
-
 				 var player3 = document.getElementById('player_3');
 				 $f(player3).addEvent('ready', ready);
 
@@ -62,7 +59,6 @@ $(function() {
 					 slideshow: false,
 					 before: function(slider){
 						 $f(player1).api('pause');
-						 $f(player2).api('pause');
 						 $f(player3).api('pause');
 						 $f(player4).api('pause');
 						 $f(player5).api('pause');
