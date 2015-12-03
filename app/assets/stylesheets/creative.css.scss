@@ -65,7 +65,9 @@ p {
     line-height: 1.5;
     widows: 3;
 }
-
+#phone_number {
+    margin-bottom: 0px;
+}
 .bg-primary {
     background-color: #fff;
     color: #315c93;
@@ -650,4 +652,9 @@ right: 0px;
     }
 }
 
+@media(max-width:400px){
+    .addthis_sharing_toolbox {
+        display: none;
+    }
+}
 
