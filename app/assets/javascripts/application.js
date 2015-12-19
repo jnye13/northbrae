@@ -14,6 +14,7 @@ $(function() {
      if($('body').hasClass('index')){
 
 		 $( document ).ready(function() {
+		 	
 			 var isMobile = window.matchMedia("only screen and (max-width: 768px)");
 			 if (isMobile.matches) {
 				 $('#video_wrapper').removeClass('flexslider');
@@ -41,6 +42,10 @@ $(function() {
 						 element.attachEvent(eventName, callback, false);
 					 }
 				 }
+				 
+				 
+				
+				 
 
 				 function ready(player_id) {
 					 var froogaloop = $f(player_id);
@@ -51,6 +56,19 @@ $(function() {
 						 $('.flexslider').flexslider("play");
 					 });
 				 }
+				 
+				 $('#top-get-btn').click(function() {
+					 $('#myModal').on('shown.bs.modal', function () {
+  					 $('#modal-content').focus()
+					});
+				 });
+				 
+				 $('#FSsubmit').click(function() {
+				 	$('#myModal').removeClass('frame-one150961846');
+				 	$('#myModal').addClass('sm-iframe');
+
+				 	
+				 })
 
 				 $('.flexslider').flexslider({
 					 animation: "slide",
