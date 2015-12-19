@@ -340,6 +340,22 @@ header .header-content .header-content-inner p {
      height: 860px;
  }
  
+// #frame-one150961846 {
+//      height: 900px;
+//  }
+
+@media(max-width:650px) {
+    .mobile-close {
+        display: inline;
+    }
+}
+
+@media(min-width:651px) {
+    .mobile-close {
+        display: none;
+    }
+}
+ 
 .sm-iframe {
     height: 160px;
 }
