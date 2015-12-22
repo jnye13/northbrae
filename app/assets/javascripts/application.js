@@ -57,7 +57,7 @@ $(function() {
 					 });
 				 }
 				 
-				 $('#top-get-btn').click(function() {
+				 $('.get-btn').click(function() {
 					 $('#myModal').on('shown.bs.modal', function () {
   					 $('#modal-content').focus()
 					});
