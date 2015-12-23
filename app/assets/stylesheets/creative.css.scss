@@ -48,6 +48,11 @@ a:focus {
     color: #2b7dd6;
 }
 
+#bottom-btn a:focus {
+    background-color: #2e5c94;
+}
+
+
 h1,
 h2,
 h3,
@@ -65,7 +70,9 @@ p {
     line-height: 1.5;
     widows: 3;
 }
-
+#phone_number {
+    margin-bottom: 0px;
+}
 .bg-primary {
     background-color: #fff;
     color: #315c93;
@@ -329,6 +336,39 @@ header .header-content .header-content-inner p {
     margin-bottom: 0;
 }
 
+.frame-one150961846 {
+     height: 860px;
+ }
+ 
+// #frame-one150961846 {
+//      height: 900px;
+//  }
+
+@media(max-width:650px) {
+    .mobile-close {
+        display: inline;
+    }
+}
+
+@media(min-width:651px) {
+    .mobile-close {
+        display: none;
+    }
+}
+ 
+.sm-iframe {
+    height: 160px;
+}
+
+.contact-sct {
+    color: #2e5c94;
+}
+#signup-now {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 128px;
+    text-align: center;
+}
 
 #video{
     padding-top: 100;
@@ -650,4 +690,9 @@ right: 0px;
     }
 }
 
+@media(max-width:400px){
+    .addthis_sharing_toolbox {
+        display: none;
+    }
+}
 
