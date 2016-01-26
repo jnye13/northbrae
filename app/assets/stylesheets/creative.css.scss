@@ -27,7 +27,7 @@ body {
 
 hr {
     max-width: 80px;
-    border-color: #315c93;
+    border-color: #81130C;
     border-width: 3px;
 }
 
@@ -45,7 +45,7 @@ a {
 
 a:hover,
 a:focus {
-    color: #2b7dd6;
+    color: #81130C;
 }
 
 #bottom-btn a:focus {
@@ -75,12 +75,22 @@ p {
 }
 .bg-primary {
     background-color: #fff;
-    color: #315c93;
+    color: #81130C;
 }
 
 .bg-mid {
     background-color: #ddd;
 
+}
+
+#top-get-btn {
+    color: #fff;
+    background-color: #81130C;
+}
+
+#top-get-btn:hover {
+    color: #fff;
+    background-color: #81130C;
 }
 
 
@@ -116,6 +126,12 @@ aside {
     margin-bottom: 0px;
 }
 
+.nav-logo {
+    height: 70px;
+    width: auto;
+    margin-top: -25px;
+}
+
 .navbar-default .navbar-header .navbar-brand {
     text-transform: uppercase;
     font-family: Open Sans, Helvetica Neue, Arial, sans-serif;
@@ -126,7 +142,7 @@ aside {
 
 .navbar-default .navbar-header .navbar-brand:hover,
 .navbar-default .navbar-header .navbar-brand:focus {
-    color: #2b7dd6;
+    color: #81130C;
 }
 
 .navbar-default .nav > li>a,
@@ -139,14 +155,14 @@ aside {
 
 .navbar-default .nav > li>a:hover,
 .navbar-default .nav>li>a:focus:hover {
-    color: #315C93;
+    color: #81130C;
 }
 
 .navbar-default .nav > li.active>a,
 .navbar-default .nav>li.active>a:focus {
-    color: #315C93!important;
+    color: #81130C!important;
     background-color: transparent;
-    border-bottom: solid 1px #315C93;
+    border-bottom: solid 1px #81130C;
 }
 
 .navbar-default .nav > li.active>a:hover,
@@ -169,7 +185,7 @@ header {
     min-height: auto;
     /* text-align: center;*/
     color: #000;
-    background-image: image-url("snowy-forest.png");
+    background-image: image-url("drink.png");
     background-color: #fff;
     z-index: 1;
    -webkit-background-size: cover;
@@ -245,7 +261,7 @@ header .header-content .header-content-inner p {
     .navbar-default .navbar-header .navbar-brand:hover,
     .navbar-default .navbar-header .navbar-brand:focus,
  {
-        color: #2b7dd6;
+        color: #81130C;
     }
 
     .navbar-default .nav > li>a,
@@ -273,7 +289,7 @@ header .header-content .header-content-inner p {
 
     .navbar-default.affix .navbar-header .navbar-brand:hover,
     .navbar-default.affix .navbar-header .navbar-brand:focus {
-        color: #2b7dd6;
+        color: #81130C;
     }
 
     .navbar-default.affix .nav > li>a,
@@ -283,13 +299,13 @@ header .header-content .header-content-inner p {
 
     .navbar-default.affix .nav > li>a:hover,
     .navbar-default.affix .nav>li>a:focus:hover {
-        color: #2b7dd6;
+        color: #81130C;
     }
    
 
     header {
         height: 85%;
-        background-image: image-url("snowy-forest.png");
+        background-image: image-url("drink.png");
         background-attachment: fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
@@ -363,16 +379,42 @@ header .header-content .header-content-inner p {
 .contact-sct {
     color: #2e5c94;
 }
+
+#contact p {
+    color: #181818;
+}
+
+#contact a {
+    color: #181818;
+}
+
+#contact i {
+    color: #81130C;
+}
+
 #signup-now {
     padding-top: 15px;
     padding-bottom: 15px;
     width: 128px;
     text-align: center;
+    background-color: #81130C;
+}
+
+#signup-now:hover {
+    background-color: #81130C;
+}
+
+#signup-now:active {
+    background-color: #81130C;
 }
 
 #video{
     padding-top: 100;
     list-style: none;  
+}
+
+h6 {
+    color: #181818;
 }
 
 .portfolio-box {
@@ -519,9 +561,9 @@ fieldset[disabled] .btn-default.active {
 .btn-primary:active,
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
-    border-color: #ed431f;
+   // border-color: #ed431f;
     color: #fff;
-    background-color: #2b7dd6;
+    background-color: #81130C;
 }
 
 .btn-primary:active,
@@ -659,7 +701,7 @@ footer{
 /*--anywhere--*/
 
 .anywhere h3{
-    color: #315c93;
+    color: #81130C;
     padding: 35px 0px 25px;
 }
 .anywhere-img {

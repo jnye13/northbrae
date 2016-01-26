@@ -3,30 +3,30 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
 <head>
-    <title>SMRT</title>
+    <title>NB Cocktail Club</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="SMRT Systems, the better POS">
+    <meta name="description" content="Northbrae Cocktail Club">
     <meta name="author" content="">
 
-    <link rel="shortcut icon" href="smrt_logo_sm.png">
+    <link rel="shortcut icon" href="nbs.png">
 
-    <link rel="shortcut icon" href="<%= asset_path 'smrt_logo_sm.png' %>" class="nav-icon">
+    <link rel="shortcut icon" href="<%= asset_path 'nbs.png' %>" class="nav-icon">
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
-    <meta property="og:url http://www.smrtsystems.com"                content="http://www.smrtsystems.com" />
+    <meta property="og:url http://www..com"                content="http://www..com" />
     <meta property="og:type "               content="product" />
-    <meta property="og:title"              content="SMRT Systems" />
-    <meta property="og:image" content="<%= asset_url("321screens.png") %>" alt="scalable software" />
-    <meta property="og:image" content="<%= asset_url("web_screens.png") %>" alt="software screenshots" />
+    <meta property="og:title"              content="NorthbraeBottleShop" />
+    <meta property="og:image" content="<%= asset_url(".png") %>" alt="scalable software" />
+    <meta property="og:image" content="<%= asset_url(".png") %>" alt="software screenshots" />
 
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@smrtsystems" />
-    <meta name="twitter:creator" content="@smrtsystems" />
-    <meta property="og:description" content="SMRT Systems is an all in one dry cleaning software solution." />
+    <meta name="twitter:site" content="@NB_BottleShop" />
+    <meta name="twitter:creator" content="@NB_BottleShop" />
+    <meta property="og:description" content="" />
    
 
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -39,12 +39,6 @@
 
   <%= csrf_meta_tags %>
 
-  <script type="text/javascript">
-  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.1";
-    analytics.load("usH466V6fmgdQ6pAWVDv5MCyNtwJzV7f");
-    analytics.page()
-    }}();
-    </script>
 
 </head>
 <body id="page-top" class="<%= @page_body_cls %>">
@@ -60,7 +54,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand page-scroll" href="#page-top"><img src="<%= asset_path("smrt_logo_sm.png") %>" class="nav-logo" alt="smrt systems logo" style=" display: inline; margin-right: 5px;">SMRT Systems<br><span class="perf">powerful POS</span></a>
+            <a class="navbar-brand page-scroll" href="#page-top"><img src="<%= asset_path("nbs.png") %>" class="nav-logo" alt="nbs logo" style=" display: inline; margin-right: 5px;"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -91,11 +85,11 @@
                 </li> -->
 
                 <% if @page_body_cls == 'index' %>
-                    <li><a class="page-scroll " href="#features">Features</a></li>
                     <li><a class="page-scroll " href="#about">About</a></li>
-                    <li><a class="page-scroll " href="#video">Video</a></li> 
+                    <li><a class="page-scroll " href="#features">Products</a></li>
+                    <!--<li><a class="page-scroll " href="#video">Video</a></li> -->
                     <li><a class="page-scroll " href="#pricing">Pricing</a></li>
-                    <li><a class=" page-scroll " href="/faqs">FAQs</a></li>       
+                    <!--<li><a class=" page-scroll " href="/faqs">FAQs</a></li>       -->
                     <li><a class="page-scroll " href="#contact">Contact</a></li>
                 <% elsif @page_body_cls == 'faqs' %>
                     <li><a class="page-scroll " href="/#features">Features</a></li>
@@ -112,13 +106,13 @@
     </div>
     <!-- /.container-fluid -->
 </nav>
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5646369e0ef0b85f" async="async"></script>
-    <div class="addthis_sharing_toolbox"></div>
+<!--<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5646369e0ef0b85f" async="async"></script>-->
+<!--    <div class="addthis_sharing_toolbox"></div>-->
 
 <%= yield %>
 <div class="row" id="bottom-btn">
     <div class="col-sm-12" style="text-align: center">
-        <a id="signup-now" href="https://www.smrtsystems.com/signup" target="_BLANK" class="btn btn-primary page-scroll">Sign Up Now</a>
+        <a id="signup-now" href="#" target="_BLANK" class="btn btn-primary page-scroll">Sign Up Now</a>
     </div>
 </div>
 <section class="bg-primary" id="contact">
@@ -131,16 +125,16 @@
             </div>
                 <div class="col-lg-4 text-center">
                     <i class="fa fa-phone fa-3x wow"></i>
-                    <p id='phone_number'>Sales: <a href="tel:1-415-612-9885">+1 (415) 612-9885</a></p>
-                    <p>Support: <a href="tel:1-415-612-1177">+1 (415) 612-1177</a></p> 
+                    <p id='phone_number'>Sales: <a href="tel:1-510-525-5323">510 525-5323</a></p>
+                    
                 </div>
                 <div class="col-lg-4 text-center">   
-                    <p>1847 Belles St<br>San Francisco<br>CA 94129</p>
+                    <p>1590 Hopkins St<br>Berkeley<br>CA 94703</p>
                 </div>
 
                 <div class="col-lg-4 text-center"  >
-                    <a type="button" id="top-get-btn" target="_BLANK" data-toggle="modal" data-target="#myModal" class="get-btn contact-sct"><i class="fa fa-envelope-o fa-3x wow"></i></a>
-                    <p><a type="button" id="top-get-btn" target="_BLANK" data-toggle="modal" data-target="#myModal" class="get-btn contact-sct">Send us a message</a></p>
+                    <a type="button" id="btn-get-btn" target="_BLANK" data-toggle="modal" data-target="#myModal" class="get-btn contact-sct"><i class="fa fa-envelope-o fa-3x wow"></i></a>
+                    <p><a type="button" id="btn-get-btn" target="_BLANK" data-toggle="modal" data-target="#myModal" class="get-btn contact-sct">Send us a message</a></p>
                 </div>
             </div> 
 
@@ -161,7 +155,7 @@
         </div>
         </div> -->
 
-            <div class="col-lg-8 col-lg-offset-2 text-center"><h6>copyright SMRT Systems 2015 all rights reserved</h6></div>                  
+            <div class="col-lg-8 col-lg-offset-2 text-center"><h6>copyright Northbrae Bottle Shop all rights reserved</h6></div>                  
         </div>
     </div>
 </section>
@@ -171,8 +165,8 @@
     <div class="container_12">
         <div class="grid_12">
           <div class="social_links">
-            <a href="https://www.facebook.com/smrtsystems?fref=ts" target="_blank"><img src="<%= asset_path("FB-Icon.png") %>" alt="Facebook" /></a>
-            <a href="https://twitter.com/smrtsystems" target="_blank"><img src="<%= asset_path("twitter-icon.png") %>" alt="Twitter" /></a> 
+            <a href="https://www.facebook.com/NorthbraeBottleShop/" target="_blank"><img src="<%= asset_path("FB-Icon.png") %>" alt="Facebook" /></a>
+            <a href="https://twitter.com/NB_BottleShop" target="_blank"><img src="<%= asset_path("twitter-icon.png") %>" alt="Twitter" /></a> 
             </div>
         </div>
     </div>
